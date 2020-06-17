@@ -34,11 +34,25 @@ public class MainActivity extends AppCompatActivity {
                 this,android.R.layout.simple_list_item_1,
                 android.R.id.text1,products);
         listView.setAdapter(adapter);
+        
+        swich();
     }
     public void onClickBtn(View v){
         Toast.makeText(this,"loading...",Toast.LENGTH_LONG).show();
         Intent nextActivity = new Intent(getApplicationContext(),NextActivity.class);
         startActivity(nextActivity); //ouvre la nouvelle activité
         finish(); //ferme l'activité courante
+    }
+    public void swich(){
+        // Une fonction de delay. Un test pour faire de l'asynchrone
+        new android.os.Handler().postDelayed(
+                new Runnable() {
+                    public void run() {
+                        Intent nextActivity = new Intent(getApplicationContext(),NextActivity.class);
+                        startActivity(nextActivity); //ouvre la nouvelle activité
+                        finish(); //ferme l'activité courante
+                    }
+                },
+                3000);
     }
 }
