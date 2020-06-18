@@ -46,13 +46,13 @@ public class MainActivity extends AppCompatActivity {
         
         //On fait appel à la fonction swich pour qu'au bout de 3s,
         //la page change.
-        swich();
+        //swich();
     }
     public void onClickBtn(View v){
         //La fonction lié au bouton pour changer de page/activity
         Toast.makeText(this,"loading...",Toast.LENGTH_LONG).show();
-        Intent nextActivity = new Intent(getApplicationContext(),NextActivity.class);
-        startActivity(nextActivity); //ouvre la nouvelle activité
+        Intent otherActivity = new Intent(getApplicationContext(),OtherActivity.class);
+        startActivity(otherActivity); //ouvre la nouvelle activité
         finish(); //ferme l'activité courante
     }
     public void swich(){
@@ -66,6 +66,6 @@ public class MainActivity extends AppCompatActivity {
                         finish(); //ferme l'activité courante
                     }
                 },
-                3000);
+                30000);
     }
 }
