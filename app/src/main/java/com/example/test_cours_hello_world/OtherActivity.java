@@ -32,12 +32,12 @@ public class OtherActivity extends AppCompatActivity {
         etPrice=findViewById(R.id.et_main_price);
         listView=findViewById(R.id.lv_main);
     
-        ArrayList<Product> products = new ArrayList<>();
+        //ArrayList<Product> products = new ArrayList<>();
         //products.add(new Product("Farine",3.15));
         //products.add(new Product("chocolat",4.5));
         //products.add(new Product("Oeufs x6",2.85));
         
-        //ArrayList<Product> products=dbManager.getAllProducts();
+        ArrayList<Product> products=dbManager.getAllProducts();
         listView.setAdapter(new ProductAdapter(this,products));
     }
     public void onClickAddBtn(View view){
